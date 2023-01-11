@@ -1,0 +1,391 @@
+:root{
+    --light-white: rgb(250, 250, 250);
+    --medium-white: rgb(219, 219, 219);
+    --medium-grey: rgb(142,142,142);
+    --dark-blue: rgb(56, 81, 133);
+    --medium-blue: rgb(0, 149, 246);
+}
+
+* {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body{
+    overflow-y:scroll;
+    background-color:var(--light-white)
+}
+
+.mainContainer{
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+}
+
+.pageContainer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 791px;
+    height: 100vh;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.mainIntro{
+    display: flex;
+    flex-direction: row;
+    flex-grow:1;
+    margin: 32px 0px 0px 0px;
+    padding: 0px 0px 32px 0px;
+    justify-content:center;
+    align-items: center;
+}
+
+.phoneFrame{
+    position: relative;
+    flex-basis: 380px;
+    height: 581px;
+    width: 380px;
+    margin-right: 32px;
+    margin-bottom: 12px;    
+}
+
+.frame{
+    height: 581px;
+    width: 380px;
+}
+
+@keyframes slideShow1{
+    0%   { opacity:1; }
+    25% { opacity:0; }
+    50% { opacity:0; }
+    75% { opacity:0; }
+    100%   { opacity:1; }
+}
+
+@keyframes slideShow2 {
+    0%   { opacity:1; }
+    25% { opacity:1; }
+    50% { opacity:0; }
+    75% { opacity:0; }
+    100%   { opacity:0; }
+}
+
+@keyframes slideShow3 {
+    0%   { opacity:0; }
+    25% { opacity:1; }
+    50% { opacity:1; }
+    75% { opacity:0; }
+    100%   { opacity:0; }
+}
+
+@keyframes slideShow4 {
+    0%   { opacity:0; }
+    25% { opacity:0; }
+    50% { opacity:1; }
+    75% { opacity:1; }
+    100%   { opacity:0; }
+}
+
+.screenshot{
+    position:absolute;
+    left:113px;
+    top: 25px;
+    width: 250px;
+}
+
+.sc4{
+    animation: slideShow1 20s infinite;
+}
+
+.sc3{
+    animation: slideShow2 20s infinite;
+}
+
+.sc2{
+    animation: slideShow3 20s infinite;
+}
+
+.sc1{
+    animation: slideShow4 20s infinite;
+}
+
+.userContent{
+    width: 350px;
+    height:100%;
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.boxBorder{
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--medium-white);
+    background-color: white;
+}
+
+.login{
+    height: 380px;
+    padding: 10px 0 10px 0;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+}
+
+.loginLogo{
+    height: 51px;
+    width: 176px;
+    margin: 36px 0 12px 0;
+}
+
+.loginDetail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    height: 267px;
+    width: 348px;
+    margin-top: 28px;
+}
+
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formElement{
+    margin: 0 40px 0 40px;
+}
+
+.inputBox{
+    height: 36px;
+    width: 258px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    border-color: var(--medium-white);
+    background-color: var(--light-white);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    padding: 0px 0 0px 8px;
+    font-size: 12px;
+}
+
+.inputBox:focus {
+    outline: none;
+    border-color: rgb(180, 180, 180);
+  }
+
+.inputButton{
+    height: 32px;
+    width: 268px;
+    border-radius: 8px;
+    border-style: none;
+    color: white;
+    background: var(--medium-blue);
+    opacity: 0.7;
+    margin: 8px 0 8px 0;
+    font-size: 14px;
+    font-weight:600; 
+}
+
+.separator{
+    height: 15px;
+    width: 268px;
+    margin-top: 10px;
+    margin-bottom: 18px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:flex-start;
+}
+
+.separator > div{
+    height: 1px;
+    flex-grow: 1;
+    background-color: var(--medium-white);
+    margin-top: 6.3px;
+}
+
+.separator > span{
+    margin: 0 18px 0 18px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 15px;
+    color: var(--medium-grey);
+}
+
+.facebook{
+    height: 20px;
+    width: 268px;
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.fbButton{
+    border-style: none;
+    color: var(--dark-blue);
+    font-size: 14px;
+    font-weight: 600;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.fbButton > img{
+    height: 16px;
+    width: 16px;
+    margin-right: 8px;
+    padding-top: 1px;
+}
+
+.password{
+    height: 16px;
+    margin-top: 12px;
+    font-size: 12px;
+    color: rgb(0, 55, 107);
+    text-decoration: none;
+}
+
+.signUp{
+    height: 41px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0 10px 0;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.signUpText{
+    color: rgb(0, 149, 246);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.mobileApp{
+    height: 95px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobileText{
+    height: 11px;
+    width: 310px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px 20px 10px 20px;
+    align-items: center;
+    font-size: 14px;
+}
+
+.mobile > span{
+    text-align:justify;
+}
+
+.mobileImg{
+    height: 44px;
+    width: 100%;
+    margin: 10px 0 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+}
+
+.mobileImg > a > img{
+    height: 40px;
+}
+
+.footer{
+    min-height: 134px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px 0 16px;
+    color: var(--medium-grey);
+}
+
+.footerContent{
+    margin-bottom: 52px;
+}
+
+.catelog{
+    font-size: 12px;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.catelog > a{
+    margin: 0 8px 12px 8px;
+    height: 11px;
+    line-height: 12px;
+    color: var(--medium-grey);
+    text-decoration: none;
+}
+
+.aboutWebsite{
+    max-height: 11px;
+    font-size: 12px;
+    margin: 12px 0 12px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.aboutWebsite > select{
+    background-color: transparent;
+    border-style: none;
+    font-size: 12px;
+    color: var(--medium-grey);
+}
+
+.aboutWebsite > span{
+    margin-left: 12px;
+}
+
+@media only screen and (max-width: 875px) {
+    .phoneFrame{
+        display: none;
+        width: 0px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .mainIntro{
+        margin: 0;
+    }
+    .boxBorder{
+        border-style: none;
+        background-color: transparent;
+    }
+    .userContent{
+        margin: 0;
+        justify-content: space-between;
+    }
+}
